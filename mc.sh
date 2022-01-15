@@ -10,7 +10,7 @@ do
     echo Calculating $i
     ./a.out $i 25 >> out.csv
     mv valsout.txt vals.txt
-	mv ptsout.txt pts.txt
+    mv ptsout.txt pts.txt
     mv infout.txt inf.txt
 done
 date +"%Y-%m-%d %T" >> date.csv
