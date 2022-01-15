@@ -4,8 +4,6 @@
     Made to be ran multiple times from a bash script.
     Garrett Grey
 
-    Big O Notation: O(n)
-
     12/21/21 - 1/14/22
 */
 #include <iostream>
