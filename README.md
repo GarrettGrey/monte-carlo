@@ -4,6 +4,8 @@ A program that outputs the results of multiple monte carlo calculations. Proudly
 Tested on Carbonate, one of Indiana University's supercomputer clusters. Not sure if the following statement is required in this context but I'll put it here anyway:
 This research was supported in part by Lilly Endowment, Inc., through its support for the Indiana University Pervasive Technology Institute.
 
+The .ipynb file contains the code I wrote for my Scientific Computing class and adapted into this project.
+
 *results may vary, for best results increment to your desired value by a resonably small value, like from 1,000 to 500,000 in increments of 1,000.
 
 
