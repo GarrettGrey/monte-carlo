@@ -1,10 +1,10 @@
 /*
     Calculates pi using the Monte Carlo Method.
     Adapted and modified from python code.
-    Made to be ran multiple times from a bash script.
+    Made to be ran multiple times from a shell script.
     Garrett Grey
 
-    12/21/21 - 1/14/22
+    12/21/21 - 1/18/22
 */
 #include <iostream>
 #include <cmath>
@@ -32,7 +32,7 @@ double dist(double x1, double y1, double x2, double y2){ // calculates the dista
     return sqrt((pow((x1-x2),2)) + pow((y1-y2),2));
 }
 
-double monteCarlo(int nump, int pr){ //nump is the number of points that will be created
+double monteCarlo(int nump){ //nump is the number of points that will be created
         array<double,2> pt; //current point being processed. Index 0 is X and 1 is Y.
 		numc = minnumc; // Number of points in the circle.
   		//cout << "Calculating "<< nump << endl;
@@ -48,7 +48,7 @@ double monteCarlo(int nump, int pr){ //nump is the number of points that will be
 				out << pt[0] << " " << pt[1] << endl;
             }
             if(dpnt >= 10){
-                cout << "Too many duplicate points, stopping calculations" << endl; //assume that we've done so many calculations that we've ran out of unique doubles to use. This is an extreme case, but this is just to save face.
+                cout << "Too many duplicate points, stopping calculations\n"; //assume that we've done so many calculations that we've ran out of unique doubles to use. This is an extreme case, but this is just to save face.
                 return 123;
             }
         }
@@ -60,7 +60,7 @@ double monteCarlo(int nump, int pr){ //nump is the number of points that will be
 int main(int args, char** argv){
 
     if(args != 3){
-        cout << "Usage: ./a.out [Depth of each calculation] [Number of calculations]" << endl;
+        cout << "Usage: ./a.out [Depth of each calculation] [Number of calculations]\n";
         return 0;
     }
     srand(time(NULL));
@@ -127,7 +127,7 @@ int main(int args, char** argv){
 
     for(int i = 0; i < atoi(argv[2]); i++){
         //cout << i+1 << endl << "\x1b[1A"; //"\x1b[1A" Goes up one line, allowing the counter to increment rather than print the last number after calculations are complete. Only works in *nux and in the terminal.
-        double val = monteCarlo(dep,pre);
+        double val = monteCarlo(dep);
       	if(dpnt >= 10)return 0;
         preo << val << " ";
         if(val < min)min = val;
