@@ -15,8 +15,6 @@
           	Change first for to if and add goto: No change, conclusion: goto is the same as a loop
             Move code in checkpt from a dedicated function to the nested loops: No change, conclusion: putting a function with a loop in it within a loop still counts as a nested loop
             Remove duplicate point checking: .432 sec, conclusion: what
-
-    TODO: Revise the disgusting triple nested for loop.
 */
 #include <iostream>
 #include <cmath>
